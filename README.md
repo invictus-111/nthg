@@ -103,9 +103,27 @@ int main()
     getch();
     return 0;
 }
+..
+
+..
+.
+.
+.
+.
+.
+
 
 
 2
+.
+.
+.
+.
+
+..
+.
+.
+..
 
 i = 0
 x = 0
@@ -139,10 +157,24 @@ elif x == 2:
 
 else:
     print("\nError")
-
-
+.
+..
+.\\.
+.
+.
+.
 
 *3*
+.
+.
+.
+.
+.
+.
+.
+.
+..
+..
 
 
 dc = "QWERTYUIOPASDFGHJKLZXCVBNM"
@@ -280,7 +312,6 @@ m = []
 en = []
 
 
-# Prime checking function
 def prime(pr):
 
     j = int(math.sqrt(pr))
@@ -293,7 +324,7 @@ def prime(pr):
     return 1
 
 
-# Validate prime numbers
+
 if prime(p) == 0:
     print("\nWRONG INPUT")
     exit()
@@ -303,17 +334,15 @@ if prime(q) == 0 or p == q:
     exit()
 
 
-# Convert message to ASCII
 for ch in msg:
     m.append(ord(ch))
 
 
-# RSA calculations
 n = p * q
 t = (p - 1) * (q - 1)
 
 
-# Find d
+
 def cd(x):
 
     k = 1
@@ -326,7 +355,6 @@ def cd(x):
             return k // x
 
 
-# Find e and d
 def ce():
 
     k = 0
@@ -361,7 +389,7 @@ for i in range(len(e)):
     print(e[i], "\t", d[i])
 
 
-# Encryption
+
 key = e[0]
 
 for i in range(len(msg)):
@@ -390,7 +418,7 @@ for ch in en:
     print(ch, end="")
 
 
-# Decryption
+
 key = d[0]
 
 dec = []
@@ -416,11 +444,12 @@ print("\nTHE DECRYPTED MESSAGE IS")
 for ch in dec:
     print(ch, end="")
 
-
-
-
-
-
+.
+.
+.
+.
+.
+.
 
 5
 
@@ -430,7 +459,7 @@ g = 7
 a = 3
 b = 6
 
-# Public values
+
 A = pow(g, a, p)
 B = pow(g, b, p)
 
@@ -438,7 +467,7 @@ print("Public values:")
 print("A (Alice sends):", A)
 print("B (Bob sends):", B)
 
-# Shared secret
+
 shared_secret_alice = pow(B, a, p)
 shared_secret_bob = pow(A, b, p)
 
