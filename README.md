@@ -472,6 +472,54 @@ shared_secret_alice = pow(B, a, p)
 shared_secret_bob = pow(A, b, p)
 
 print("\nShared secrets:")
+
+
+
+.
+.
+.
+..
+
+...
+.
+.
+..
+..
+.
+.
+.
+.
+p = 23;
+g = 7;
+
+a = 3;
+b = 6;
+
+// Public values
+A = modulo(g^a, p);
+B = modulo(g^b, p);
+
+disp("Public values:");
+disp("A (Alice sends):");
+disp(A);
+
+disp("B (Bob sends):");
+disp(B);
+
+// Shared secrets
+shared_secret_alice = modulo(B^a, p);
+shared_secret_bob = modulo(A^b, p);
+
+disp("Shared secrets:");
+
+disp("Alice's secret:");
+disp(shared_secret_alice);
+
+disp("Bob's secret:");
+disp(shared_secret_bob);
+
+disp("Match:");
+disp(shared_secret_alice == shared_secret_bob);
 print("Alice's secret:", shared_secret_alice)
 print("Bob's secret:", shared_secret_bob)
 
